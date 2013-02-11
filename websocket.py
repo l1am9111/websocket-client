@@ -408,13 +408,6 @@ class WebSocket(object):
             hostport = host
         else:
             hostport = "%s:%d" % (host, port)
-
-        if port == 80:
-            hostport = "http://" + hostport
-        elif port == 443:
-            hostport = "https://" + hostport
-        else:
-            hostport = "http://" + hostport
         headers.append("Host: %s" % hostport)
         headers.append("Origin: %s" % hostport)
 
